@@ -8,6 +8,7 @@ form.addEventListener('submit', formSubmitted);
 loader.style.display = 'none';
 
 function formSubmitted(event){
+	images.innerHTML = ""
 	event.preventDefault();
 	const searchTerm = input.value;
 
@@ -19,12 +20,13 @@ function formSubmitted(event){
 
 function search(searchTerm){
 	loader.style.display = '';
-	return fetch(`${API_URL}`)
+	let a = fetch(`${API_URL}`)
 		.then(response => response.json())
 		.then(result =>{
 			console.log(result.photos);
 			return result.photos;
 		});
+	return a;
 }
 
 function displayImages(Images){
@@ -36,6 +38,6 @@ function displayImages(Images){
 		images.appendChild(imageElement);
 	})
 	loader.style.display = 'none';
+	API_URL = '';
+	API_URL = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?';
 }
-
-//sol=1000&page=1&api_key=aJDLkW5WTb3oYgmdZgpaaqru0fBvOoxWL08TKP2J';
