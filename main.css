@@ -3,8 +3,8 @@ body{
 	margin: 2em auto 0 auto;
 }
 
-.images{
-	column-count: 3;
+#images{
+	column-count: 5;
 }
 
 #loadingimage {
