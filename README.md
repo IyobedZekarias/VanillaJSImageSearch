@@ -5,4 +5,4 @@ The api has a value for the sol, given by the user, and will return all the phot
 Once the array is returned of all the links to the images the javascript program goes through and puts all the images on the screen. 
 
 
-site: https://IyobedZekarias.github.io/VanillJSImageSearch
+site: https://IyobedZekarias.github.io/VanillJSImageSearch/
